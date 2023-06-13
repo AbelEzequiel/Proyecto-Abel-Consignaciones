@@ -16,7 +16,7 @@
     src: url("../Fonts/Walkway_Bold.ttf"); /*TEXTO importante de la pagina*/
 }
 /*-------Barra de Menu-------*/
- 
+
 header {
     background-color: #016392;
 }
@@ -40,7 +40,7 @@ header {
 .carrouselSection {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 .carrouselTamaño {
     height: 70%;
@@ -58,13 +58,13 @@ body {
 /*------Contenedor Caja Padre Grid------*/
 .columnaGridPrincipal {
     display: grid;
-    width: 80%;
-    height: 800px;  
+    width: 90%;
+    height: auto;  
     gap: 1rem;
     justify-content: center;
 
     grid-template-columns: 30% 15% 30% 15%;
-    grid-template-rows: 100px 450px 200px 100px 100px 200px;  
+    grid-template-rows: 100px 450px 200px 40px 100px 200px;  
     
     grid-template-areas:
     
@@ -73,7 +73,7 @@ body {
     "contenedorTextoAuto contenedorTextoAuto contenedorTextoAuto2 contenedorTextoAuto2"
     "0 0 0 0"
     "tituloUIncorporaciones tituloUIncorporaciones tituloUIncorporaciones tituloUIncorporaciones"
-    "footerflex footerflex footerflex footerflex";
+    "containerIncorporacionesflex containerIncorporacionesflex containerIncorporacionesflex containerIncorporacionesflex";
 }
 /*-----Contenedor Cajas Hijas Grilla----*/
 .tituloGrilla {
@@ -151,6 +151,35 @@ body {
     color: #fff;
     border: 5px solid #025464;
 }
+.containerIncorporacionesflex {
+    width: 100%;
+    height: auto;
+    grid-area: containerIncorporacionesflex;
+    display: flex;
+    background-color: #231f20;
+    overflow: hidden;
+}
+.tituloUIncorporaciones {
+    grid-area: tituloUIncorporaciones;
+    background-color: #016392;
+}
+.containerIncorporaciones {
+    display: flex;
+    max-width: 100%;
+}
+.incorporacionesImagen {
+    display: flex;
+    height: 250px;
+    margin: 1px;
+    max-width: auto;
+}
+/*---- FOOTER ---- */
+.footer{
+    grid-area: footer;
+    max-width: 500px;
+    width: 100%;
+    background-color: #231f20;
+}
 /*----- ENLACE CLIENTES / ENLACE COMPRAS ----- */
 .tituloClientes , .tituloCompra{
     width: 90%;
@@ -166,33 +195,37 @@ body {
 /*----- CAJA FLEX clientes y compra ----- */
 .cajaFlex {
     width: 90%;
-    height: 900px;
-    margin: 1px 5% 1px 5%;
+    height: auto;
+    margin: auto;
     background-color: #016392;
-    padding: 10px;
-    display: flex;  
-    justify-content: center;
-    align-items: center;
+    padding: 10px;  
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .clientes{
-     flex-flow: column wrap;
-     justify-content: space-evenly; 
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 10px; 
 }
 .compra {
-    flex-wrap: wrap;
-    flex-direction: column;
-    
+    width: 300px;
+    height: 301px;
+    margin: 50px;
+    transition: width, background-color, .1s linear .1s; 
 }
+.compra:hover {
+    width: 500px;
+    background-color: #3F4E4F;
+    transition:  1s linear 1s;
+}
+
 .fotoClientes , .fotoAutos{
-    width: 270px;
+    width: 300px;
     height: auto;
     background-color: #3F4E4F;
     padding: 10px;
-    margin: 1px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 
 } 
 /* ----- ENLACE GESTORIA / ENLACE CONTACTO ----*/
@@ -210,8 +243,10 @@ body {
 .infoGestoria {
    font-family: "Walkway_Oblique_Bold";
    justify-content: start;
+   font-size: 20px;
 
 }
+
 /* ------ contacto y gestoria -----*/
 .imgGestoria, .imgContacto  {
     height: 500px;
@@ -219,24 +254,6 @@ body {
 }
 .listNone {
     list-style: none;
-}
-/*----- FOOTER ----*/    
-.footerflex {
-    grid-area: footerflex;
-    display: flex;
-    background-color: #231f20;
-}
-.tituloUIncorporaciones {
-    grid-area: tituloUIncorporaciones;
-    background-color: #016392;
-}
-.containerfooter {
-    display: flex;
-}
-.footerimagen {
-    display: flex;
-    height: 200px;
-    width: auto;
 }
 /*------- MEDIA QUERIES SWICH MOVIL -----*/
 @media screen and (max-width: 767px) {
@@ -247,7 +264,7 @@ body {
 
     /********* CARROUSEL *********/
     .fotoCarrusel  {
-        height: 145px;
+        height: 180px;
         width: auto;
     }
 
@@ -258,21 +275,19 @@ body {
     .contenedorImagenes , .contenedorImagenes2 {
         display: none;
     }
-    .contenedorTextoAuto {
-        order: -1;
-    }
     .cocheGrande {
         width: 300px;
         height: auto;
     }
-    .footerflex {
+    .containerIncorporacionesflex {
         display: block;
+        overflow: visible;
     }
-    .containerfooter{
+    .containerIncorporaciones{
         align-items: center;
         justify-content: center;
     }
-    .footerimagen {
+    .incorporacionesImagen  {
         display: flex;
         width: auto;
         justify-content: center;
@@ -284,23 +299,41 @@ body {
     
     /***COMPRA y CLIENTES****/
     .cajaFlex {
-        display: block;
-        height: 2500px;
-    }   
-   .fotoClientes {
-        height: 200px;
+        display: flex;
+        height: auto;
         width: auto;
+    }  
+    .compra {
+        width: 300px;
+        height: 301px;
+        margin: 50px;
+        transition: height, background-color, .1s linear .1s; 
+    }
+    .compra:hover {
+        height: 450px;
+        background-color: #3F4E4F;
+        transition:  1s linear 1s; 
+    }
+   .fotoClientes , .fotoAutos {
+        display: flex;
+        height: 250px;
+        width: auto;
+        margin: 20px;
    }
     /***CONTACTO Y GESTORIA ****/
     .imgGestoria , .imgContacto{
-        height: 250px;
-        width: 250px;
+        height: auto;
+        width: auto;
     }
     .tituloGestoria {
        letter-spacing: 0;
        align-items: center;
        justify-content: center;
     }
+    .infoGestoria {
+        font-size: auto;
+    }
+    
 
 }
 /*------- MEDIA QUERIES TABLET -----*/
@@ -321,7 +354,7 @@ body {
             "contenedorTextoAuto2 contenedorTextoAuto2"
             "0 0"
             "tituloUIncorporaciones tituloUIncorporaciones"
-            "footerflex footerflex";
+            "containerIncorporacionesflex containerIncorporacionesflex";
    }
        /********* CARROUSEL *********/
        .fotoCarrusel  {
@@ -334,8 +367,8 @@ body {
     display: center;
    }
    .cocheGrande {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 60%;
    }
    .contenedorTextoAuto {
     height: 120px;
@@ -343,8 +376,8 @@ body {
    }
    /******* CLIENTES ******/ 
    .fotoClientes {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 60%;
    }
 
 }  
