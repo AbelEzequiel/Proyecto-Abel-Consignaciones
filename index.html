@@ -46,19 +46,10 @@
       </ul>
     </nav>    
     </header>
-    <!----- FOOTER ----- ME FALTAN DESCARGAR LOGOS DE REDES SOCIALES Y PONERLES CLASS
-    <section> 
-           !--INFRAME--
-     !-- ENLACE UTILIZANDO ID --
-   <a class href="#iframe">Ultimas Incorporaciones</a>
-     !-- ### REDES SOCIALES ### --
-         <button class="REDSOCIAL"><a href="https://www.instagram.com/abelconsignaciones/" target="_blank">Instagram</a></button><br>
-         <button class="REDSOCIAL"><a href="https://es-la.facebook.com/abelconsignaciones/" target="_blank">Facebook</a></button><br>
-    </section> ----->
     <br>
-<main>
+ <main>
   <!------ CARRUSEL CON IMAGENES ------>
-  <section class="carrouselSection">
+  <section class="carrouselSection container-fluid">
     <div id="carouselExampleAutoplaying" class="carousel slide carrouselTamaño" data-bs-ride="carousel">
       <div class="carousel-inner">  
         <div class="carousel-item active">
@@ -68,7 +59,7 @@
           <img class="fotoCarrusel" src="./assets/FOTOS/Fotos HD Autos/hombre-maneja-747x420.jpg" class="d-block w-100" alt="hombreManejando">
         </div>
         <div class="carousel-item">
-          <img class="fotoCarrusel" src="./assets/FOTOS/Fotos HD Autos/autos3.png" class="d-block w-100" alt="tresautos">
+          <img class="fotoCarrusel" src="./assets/fotos/fotos hd autos/auto-ruta.jpg" class="d-block w-100" alt="auto-ruta">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -81,7 +72,7 @@
       </button>
     </div>
   </section>
-  <br><br><!---- separacion de carrusel y grilla-->
+  <br><!---- separacion de carrusel y grilla-->
   <!----- GRILLA OFERTAS DESTACADAS ------>
   <section class="columnaGridPrincipal">
     <h2 class="tituloGrilla centrado">Ofertas Destacadas</h2>
@@ -101,57 +92,56 @@
     <img class="cocheGrande" src="assets/fotos/fotos-inicio-destacadas/Foto a.jpg" alt="cocheenoferta">
     </div>
     <!-----  Cajas Mini Fotos 2  ----> 
-    <div class="contenedorImagenes2 centrado">
+     <div class="contenedorImagenes2 centrado">
       <img class="cocheChico" src="./assets/fotos/fotos-inicio-destacadas/foto b.jpg" alt="cocheofertachico">
       <img class="cocheChico" src="./assets/fotos/fotos-inicio-destacadas/foto c.jpg" alt="cocheofertachico">
- <!----- DESCRIPCION CAJA 1 ------>
-    </div>
- <div class="contenedorTextoAuto">
-  <ol class="listaDestacada">
-    <li>PRECIO USD: $ 10.300</li>
-    <li>MODELO:NISSAN NOTE 1.6 SENSE MT </li>
-    <li>AÑO: 2017 </li>
-    <li>CAJA: MANUAL </li>
-    <li>COMBUSTIBLE: 1.6 16V Nafta (110Hp) </li> 
-    <li>KILOMETROS: 76.000</li> 
-   </ol>
-   <!---- DESCRIPCION CAJA 2 ----->
- </div>
- <div class="contenedorTextoAuto2">
-  <ol class="listaDestacada">
-    <li>PRECIO USD: $1.870.000 </li>
-    <li>MODELO: CORSA 2 GL</li>
-    <li>AÑO:2010</li>
-    <li>CAJA: MANUAL</li>
-    <li>MOTOR: 1.8 NAFTA </li> 
-    <li>KILOMETROS: 120.000</li>  
-   </ol>
- </div> 
- <h2 class="tituloUIncorporaciones centrado">Ultimas Incorporaciones</h2>
-   <!----- FOOTER ----->
-   <footer class="footerflex">
-      <div class="col containerfooter">
-        <img class="footerimagen" src="./assets/fotos compra/Camioneta .jpg" alt="autoPerfil">
-      </div>  
-      <div class="col containerfooter">
-        <img class="footerimagen" src="./assets/fotos compra/Camioneta 2.jpg" alt="autoPerfil">
+   <!----- DESCRIPCION CAJA 1 ------>
       </div>
-        <div class="col containerfooter">
-          <img class="footerimagen" src="./assets/fotos compra/Camioneta 3.jpg" alt="autoPerfil">
+         <div class="contenedorTextoAuto">
+             <ol class="listaDestacada">
+               <li>MODELO:NISSAN NOTE 1.6 SENSE MT </li>
+               <li>PRECIO USD: $ 10.300</li>
+               <li>CAJA: MANUAL </li>
+               <li>AÑO: 2017 </li>
+               <li>KILOMETROS: 76.000</li> 
+               <li>MOTOR: 1.6 16V Nafta (110Hp) </li> 
+              </ol>
+           </div>
+    <!---- DESCRIPCION CAJA 2 ----->
+        <div class="contenedorTextoAuto2">
+            <ol class="listaDestacada">
+              <li>PRECIO USD: $1.870.000 </li>
+              <li>MODELO: CORSA 2 GL</li>
+              <li>CAJA: MANUAL</li>
+              <li>AÑO:2010</li>
+              <li>KILOMETROS: 120.000</li>  
+              <li>MOTOR: 1.8 NAFTA </li> 
+            </ol>
         </div>
-        <div class="col containerfooter">
-          <img class="footerimagen" src="./assets/fotos compra/Auto.jpg" alt="autoPerfil">
-        </div>
-        <div class="col containerfooter">
-          <img class="footerimagen" src="./assets/fotos compra/Auto 2.jpg" alt="autoPerfil">
-        </div>
-          <div class="col containerfooter">
-            <img class="footerimagen" src="./assets/fotos compra/Auto 3.jpg" alt="autoPerfil">
+        <!--ULTIMAS INCORPORACIONES-->
+      <h2 class="tituloUIncorporaciones centrado">Ultimas Incorporaciones</h2>
+       <section class="containerIncorporacionesflex">
+          <div class="containerIncorporaciones">
+              <img class="incorporacionesImagen " src="./assets/fotos compra/Camioneta .jpg" alt="autoPerfil">
+            </div>  
+            <div class="containerIncorporaciones">
+              <img class="incorporacionesImagen " src="./assets/fotos compra/Camioneta 2.jpg" alt="autoPerfil">
+            </div>
+            <div class="containerIncorporaciones">
+              <img class="incorporacionesImagen " src="./assets/fotos compra/Camioneta 3.jpg" alt="autoPerfil">
+            </div>
+            <div class="containerIncorporaciones">
+            <img class="incorporacionesImagen " src="./assets/fotos compra/Auto.jpg" alt="autoPerfil">
+            </div>
+            <div class="containerIncorporaciones">
+            <img class="incorporacionesImagen " src="./assets/fotos compra/Auto 2.jpg" alt="autoPerfil">
+            </div>
+            <div class="containerIncorporaciones">
+            <img class="incorporacionesImagen" src="./assets/fotos compra/Auto 3.jpg" alt="autoPerfil">
           </div>
-  </footer>
-  
+    </section>
   </section>
-</main>
+ </main>
 
   <!--- JAVASCRIP --->
   <script src="js/bootstrap.min.js"></script>
